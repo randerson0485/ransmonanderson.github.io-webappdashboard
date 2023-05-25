@@ -1,0 +1,74 @@
+.gridContainer{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header"
+    "navigation"
+    "main";
+}
+.header {
+grid-area: header;
+}
+.trafficNav {
+grid-area: nav;
+}
+.main {
+grid-area: main;
+}
+.canvasLineChart, .canvasBarChart {
+    width: 95vw;
+}
+.main {
+    display: grid;
+}
+
+
+                                // Media Queries
+
+
+@media (min-width: 768px) {
+    .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+    "header header"
+    "nav main";
+    }
+    .main {
+        grid-template-columns: 50% ;
+    }
+    .trafficLineSection, .socialSection, .mainheader {
+        grid-column: 1 / span 2;
+    }
+    .barSection, .doughnutSection, .membersSection, .messageSection {
+        grid-column: 1 / span 1;
+    }
+    .doughnutSection, .activitySection, .settingsSection {
+        grid-column: 2 / span 1;
+    }
+    .canvasLineChart {
+        width: 90vw;
+    }
+    .canvasBarChart {
+        width: 45vw;
+    }
+    .barSection{
+        border-right: $border;
+    }
+    .doughnutSection{
+        padding-left: 3%;
+    }.socialSection{
+        display: flex;
+    }
+    .cardContainer{
+        margin: 0;
+        margin: 2%;
+    }
+
+}
+
+
+
+
+
+   

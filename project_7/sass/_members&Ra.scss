@@ -1,0 +1,22 @@
+.membersSection, .activitySection{
+    border-bottom: $border;
+}
+.memberCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    border-bottom: $border;
+    
+    img, .memberText{
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+    img{
+        border-radius: 50%;
+    }
+}
+.memberText span{
+    font-weight: bold;
+}

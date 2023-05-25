@@ -1,0 +1,428 @@
+* {
+  box-sizing: border-box;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "navigation" "main";
+}
+
+.header {
+  grid-area: header;
+}
+
+.trafficNav {
+  grid-area: nav;
+}
+
+.main {
+  grid-area: main;
+}
+
+.canvasLineChart, .canvasBarChart {
+  width: 95vw;
+}
+
+.main {
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas: "header header" "nav main";
+  }
+  .main {
+    grid-template-columns: 50%;
+  }
+  .trafficLineSection, .socialSection, .mainheader {
+    grid-column: 1/span 2;
+  }
+  .barSection, .doughnutSection, .membersSection, .messageSection {
+    grid-column: 1/span 1;
+  }
+  .doughnutSection, .activitySection, .settingsSection {
+    grid-column: 2/span 1;
+  }
+  .canvasLineChart {
+    width: 90vw;
+  }
+  .canvasBarChart {
+    width: 45vw;
+  }
+  .barSection {
+    border-right: solid 0.1em rgb(169, 168, 168);
+  }
+  .doughnutSection {
+    padding-left: 3%;
+  }
+  .socialSection {
+    display: flex;
+  }
+  .cardContainer {
+    margin: 0;
+    margin: 2%;
+  }
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.notificationHeader {
+  background-color: #7477bf;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  padding: 2%;
+}
+.notificationHeader img {
+  height: 60px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+header nav {
+  background-color: #4c50c3;
+  color: white;
+  height: 30%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0.8% 25% 0.5%;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul img {
+  height: 30px;
+  width: 25px;
+}
+
+.notify {
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: #2ecc71;
+  padding: 0;
+}
+
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.dashboardSearch {
+  width: 100%;
+  background-color: rgb(223, 223, 223);
+  border-left: solid 0.1em rgb(169, 168, 168);
+  border-bottom: solid 0.1em rgb(169, 168, 168);
+  margin-left: 2%;
+}
+
+.alertBanner {
+  width: 80%;
+  background-color: #4c50c3;
+  border-radius: 15px;
+  padding: 1%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.alertBanner p {
+  display: inline-block;
+}
+
+.alertBannerClose {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.trafficLineSection {
+  border-bottom: solid 0.1em rgb(169, 168, 168);
+}
+
+.trafficNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.trafficNav li {
+  list-style: none;
+  font-weight: bold;
+}
+
+.barSection {
+  border-bottom: solid 0.1em rgb(169, 168, 168);
+}
+
+.doughnutSection {
+  border-bottom: solid 0.1em rgb(169, 168, 168);
+}
+
+.socialSection {
+  border-bottom: solid 0.1em rgb(169, 168, 168);
+}
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  background-color: rgb(223, 223, 223);
+  padding: 1rem 5px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+
+.socialImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7477bf;
+  border-radius: 100%;
+  margin-left: 20px;
+  width: 75px;
+  height: 75px;
+  margin-right: 15%;
+}
+
+.socialText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.socialName {
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-left: 1.1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #7477bf;
+}
+
+.socialDescription {
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-left: 1.1rem;
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: rgb(58, 57, 57);
+}
+
+.membersSection, .activitySection {
+  border-bottom: solid 0.1em rgb(169, 168, 168);
+}
+
+.memberCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2%;
+  border-bottom: solid 0.1em rgb(169, 168, 168);
+}
+.memberCard img, .memberCard .memberText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.memberCard img {
+  border-radius: 50%;
+}
+
+.memberText span {
+  font-weight: bold;
+}
+
+.widgetContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2%;
+}
+
+.messageSection {
+  border-bottom: solid 0.1em rgb(169, 168, 168);
+  padding-bottom: 4%;
+}
+
+input {
+  border-radius: 4%;
+  width: 86%;
+  height: 3.5em;
+  background-color: rgb(223, 223, 223);
+  margin-bottom: 2%;
+}
+
+textarea {
+  background-color: rgb(223, 223, 223);
+  margin: 0 auto;
+  width: 86%;
+  height: 7em;
+  margin-bottom: 2%;
+  border-radius: 4%;
+}
+
+.buttonPrimary {
+  margin: 0 auto;
+  background-color: #7477bf;
+  width: 86%;
+  border-radius: 4%;
+  height: 4em;
+}
+
+.settings {
+  grid-area: settings;
+  border-bottom: none;
+}
+
+.toggles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.toggles h3 {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.timezones {
+  background-color: #fafafa;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  height: auto;
+  width: 86%;
+  outline: 0;
+  margin: 10px;
+  padding: 1rem 5px;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+option {
+  font-size: 0.9rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.settings-save,
+.settings-cancel {
+  width: 100%;
+  padding: 1rem 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.settings-save {
+  background-color: #7477bf;
+  margin-right: 10px;
+}
+
+.settings-cancel {
+  background-color: #ccc;
+  margin-left: 10px;
+}
+
+/* The slider box */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 36px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider button */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background-color: #7477bf;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 3px #ccc;
+}
+
+input:checked + .slider:before {
+  transform: translateX(34px);
+}
+
+.slider:after {
+  content: "OFF";
+  color: white;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 75%;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+input:checked + .slider:after {
+  content: "ON";
+  left: 25%;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.canvasLineChart, .canvasBarChart, .canvasDoughnutChart {
+  padding-bottom: 4%;
+}/*# sourceMappingURL=styles.css.map */

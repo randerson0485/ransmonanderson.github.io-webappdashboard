@@ -1,0 +1,33 @@
+.mainHeader{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    
+}
+.dashboardSearch{
+    width: 100%;
+    background-color: $main-color-3;
+    border-left: $border;
+    border-bottom: $border;
+    margin-left: 2%;
+
+}
+
+.alertBanner{
+    width: 80%;
+    background-color: $main-color-2;
+    border-radius: 15px;
+    padding: 1%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    p{
+        display: inline-block;
+    }
+}
+.alertBannerClose{
+    font-weight: bold;
+    cursor: pointer;
+}
