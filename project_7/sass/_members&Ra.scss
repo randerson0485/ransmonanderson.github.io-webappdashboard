@@ -7,6 +7,16 @@
     align-items: center;
     padding-top: 2%;
     border-bottom: $border;
+
+    @media (min-width: 768px)
+        {
+        flex-direction: row;
+        margin-right: 0;
+
+        img{
+            padding-right: 2%;
+        }
+        }
     
     img, .memberText{
         display: flex;
@@ -20,3 +30,4 @@
 .memberText span{
     font-weight: bold;
 }
+

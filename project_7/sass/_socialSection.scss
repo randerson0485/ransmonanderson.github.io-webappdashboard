@@ -2,16 +2,19 @@
     border-bottom: $border;
 }
 .cardContainer {
-display: flex;
-align-items: center;
-background-color:  $main-color-3;
-padding: 1rem 5px;
-border: 1px solid lightgray;
-border-radius: 5px;
-width: 80%;
-margin: 0 auto;
-margin-bottom: 3%;
-}
+    display: flex;
+    align-items: center;
+    background-color:  $main-color-3;
+    padding: 1rem 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+      @media (min-width: 768px) {
+        margin: 20px;
+      }
+    }
 .socialImage {
 display: flex;
 justify-content: center;
