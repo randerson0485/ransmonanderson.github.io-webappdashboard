@@ -1,0 +1,59 @@
+header{
+    display: flex;
+    flex-direction: column;
+}
+.notificationHeader{
+    background-color: $main-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    padding: 2%;
+
+    img{
+        height: 60px;
+        width: 50px;
+        border-radius: 50%;
+    }
+}
+header nav{
+    background-color: $main-color-2;
+    color: white;
+    height: 30%;
+
+    @media (min-width: 768px) {
+        height: 100vh;
+        position: absolute;
+        top: 22%; 
+        left: 8px;
+        width: 75px;
+        display: flex;
+    }
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: .8% 25% .5%;
+    
+    @media (min-width: 768px) {
+        flex-direction: column;
+    }
+
+    li{
+        list-style: none;
+    }
+    img{
+        height: 30px;
+        width: 25px;
+    }
+}
+.notify{
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #2ecc71;
+    padding: 0;
+}
