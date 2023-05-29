@@ -30,20 +30,20 @@ canvas {
 }
 
 @media (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: 100% 1fr;
+  .gridContainer {
+    grid-template-columns: 75px 1fr;
     grid-template-areas: "header header" "nav main";
   }
   .main {
     grid-template-columns: 50%;
   }
-  .trafficLineSection, .socialSection, .mainheader {
+  .trafficLineSection, .socialSection, .alert, .mainHeader {
     grid-column: 1/span 2;
   }
-  .barSection, .doughnutSection, .membersSection, .messageSection {
+  .barSection, .doughnutSection, .messageSection {
     grid-column: 1/span 1;
   }
-  .doughnutSection, .activitySection, .settingsSection {
+  .doughnutSection, .settingsSection {
     grid-column: 2/span 1;
   }
   .barSection {
@@ -55,22 +55,16 @@ canvas {
   .socialSection {
     display: flex;
   }
-  nav {
-    position: absolute;
-    top: 22%;
-    left: 8px;
-    width: 75px;
-    display: flex;
-  }
   main {
-    margin-left: 7%;
-    margin-right: 2%;
+    margin-left: 1%;
   }
-  .activitySection, .membersSection {
-    border-left: solid 0.1em rgb(169, 168, 168);
-    padding-left: 3%;
-    height: 225vh;
+}
+@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+  .activitySection, .memberSections, .messageSection, .settingsSection {
+    grid-column: 1/span 2;
   }
+}
+@media (min-width: 768px) {
   .memberCard {
     min-height: 20%;
     max-height: 21%;
@@ -95,23 +89,31 @@ header {
   border-radius: 50%;
 }
 
-header nav {
+nav {
   background-color: #4c50c3;
   color: white;
-  height: 30%;
+  height: 100%;
 }
 @media (min-width: 768px) {
-  header nav {
-    height: 100vh;
+  nav {
+    height: 2750px;
+    top: 22%;
+    left: 8px;
+    width: 75px;
+    display: flex;
   }
 }
 
 nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin: 0;
   padding: 0.8% 25% 0.5%;
+}
+@media (max-width: 768px) {
+  nav ul {
+    justify-content: space-between;
+  }
 }
 @media (min-width: 768px) {
   nav ul {
@@ -120,6 +122,8 @@ nav ul {
 }
 nav ul li {
   list-style: none;
+  margin-bottom: 3em;
+  padding-top: 1em;
 }
 nav ul img {
   height: 30px;
@@ -139,12 +143,6 @@ nav ul img {
   flex-direction: row;
   margin: 0;
 }
-@media (min-width: 768px) {
-  .mainHeader {
-    margin-left: 7%;
-    margin-right: 2%;
-  }
-}
 
 .dashboardSearch {
   width: 100%;
@@ -154,7 +152,7 @@ nav ul img {
   margin-left: 2%;
 }
 
-.alertBanner {
+.alert {
   width: 80%;
   background-color: #4c50c3;
   border-radius: 15px;
@@ -164,7 +162,12 @@ nav ul img {
   justify-content: space-between;
   margin: 0 auto;
 }
-.alertBanner p {
+@media (min-width: 768px) {
+  .alert {
+    width: 100%;
+  }
+}
+.alert p {
   display: inline-block;
 }
 
@@ -253,8 +256,11 @@ nav ul img {
   color: rgb(58, 57, 57);
 }
 
-.membersSection, .activitySection {
+.activitySection, .memberSections {
   border-bottom: solid 0.1em rgb(169, 168, 168);
+  border-left: solid 0.1em rgb(169, 168, 168);
+  padding-left: 3%;
+  height: 225vh;
 }
 
 .memberCard {
@@ -273,12 +279,24 @@ nav ul img {
     padding-right: 2%;
   }
 }
-.memberCard img, .memberCard .memberText {
+@media (min-width: 768px) {
+  .memberCard > p {
+    margin-left: auto;
+  }
+}
+
+img, .memberText {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.memberCard img {
+@media (min-width: 768px) {
+  img, .memberText {
+    display: block;
+  }
+}
+
+img {
   border-radius: 50%;
 }
 

@@ -1,6 +1,9 @@
-.membersSection, .activitySection{
-    border-bottom: $border;
-}
+ .activitySection, .memberSections{
+    border-bottom: $border; 
+    border-left: $border;
+    padding-left: 3%;
+    height: 225vh;     
+ }
 .memberCard{
     display: flex;
     flex-direction: column;
@@ -15,18 +18,30 @@
 
         img{
             padding-right: 2%;
+            }
         }
+            
+            & > p{
+                @media (min-width: 768px)
+                {
+                    margin-left: auto;
+                }
+            }
         }
     
     img, .memberText{
         display: flex;
         flex-direction: column;
-        align-items: center;    
+        align-items: center; 
+        
+        @media (min-width: 768px) {
+            display: block;
+        }   
     }
     img{
         border-radius: 50%;
     }
-}
+
 .memberText span{
     font-weight: bold;
 }

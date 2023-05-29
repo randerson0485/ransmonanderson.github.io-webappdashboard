@@ -1,15 +1,7 @@
 .mainHeader{
     display: flex;
     flex-direction: row;
-    margin: 0;
-
-    @media (min-width: 768px) {
-        
-            margin-left: 7%;
-            margin-right: 2%;
-        
-    }
-    
+    margin: 0;    
 }
 .dashboardSearch{
     width: 100%;
@@ -20,7 +12,7 @@
 
 }
 
-.alertBanner{
+.alert{
     width: 80%;
     background-color: $main-color-2;
     border-radius: 15px;
@@ -29,6 +21,10 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+
+    @media (min-width: 768px) {
+       width: 100%;
+    }
 
     p{
         display: inline-block;

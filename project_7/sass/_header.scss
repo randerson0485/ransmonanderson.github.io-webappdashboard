@@ -16,29 +16,38 @@ header{
         border-radius: 50%;
     }
 }
-header nav{
+nav{
     background-color: $main-color-2;
     color: white;
-    height: 30%;
+    height: 100%;
 
     @media (min-width: 768px) {
-        height: 100vh;
+        height: 2750px;
+        top: 22%; 
+        left: 8px;
+        width: 75px;
+        display: flex;
     }
 }
 
 nav ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin: 0;
     padding: .8% 25% .5%;
     
+    @media (max-width: 768px) {
+        justify-content: space-between;
+    }
+
     @media (min-width: 768px) {
         flex-direction: column;
     }
 
     li{
         list-style: none;
+        margin-bottom: 3em;
+        padding-top: 1em;
     }
     img{
         height: 30px;

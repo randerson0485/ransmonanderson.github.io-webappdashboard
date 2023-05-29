@@ -28,8 +28,8 @@ grid-area: main;
 
 
 @media (min-width: 768px) {
-    .grid-container {
-    grid-template-columns: 100% 1fr;
+    .gridContainer {
+    grid-template-columns: 75px 1fr;
     grid-template-areas:
     "header header"
     "nav main";
@@ -37,13 +37,13 @@ grid-area: main;
     .main {
         grid-template-columns: 50% ;
     }
-    .trafficLineSection, .socialSection, .mainheader {
+    .trafficLineSection, .socialSection, .alert, .mainHeader {
         grid-column: 1 / span 2;
     }
-    .barSection, .doughnutSection, .membersSection, .messageSection {
+    .barSection, .doughnutSection, .messageSection {
         grid-column: 1 / span 1;
     }
-    .doughnutSection, .activitySection, .settingsSection {
+    .doughnutSection, .settingsSection {
         grid-column: 2 / span 1;
     }
     .barSection{
@@ -53,28 +53,21 @@ grid-area: main;
         padding-left: 3%;
     }.socialSection{
         display: flex;
-    }
-    nav{
-        position: absolute;
-        top: 22%; 
-        left: 8px;
-        width: 75px;
-        display: flex;
     } 
     main{
-        margin-left: 7%;
-        margin-right: 2%;
+        margin-left: 1%;
     }
-    .activitySection, .membersSection{
-        border-left: $border;
-        padding-left: 3%;
-        height: 225vh;
-
+    .activitySection, .memberSections, .messageSection, .settingsSection{ 
+        @media (min-width: 768px) and (max-width: 1024px) {
+            grid-column: 1 / span 2;
+          }
+          
     }
     .memberCard{
         min-height: 20%;
         max-height: 21%;
     }
+    
   
 }
 
