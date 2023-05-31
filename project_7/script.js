@@ -8,7 +8,7 @@ const notify = document.querySelector('.notify');
 alertBanner.innerHTML = `<div class="alertBanner">
 <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
 to complete</p>
-<p class="alertBannerClose">X</p>
+<button class="alertBannerClose">X</button>
 </div>`;
 
 alertBanner.addEventListener('click', e => {

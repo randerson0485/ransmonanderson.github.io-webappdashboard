@@ -1,5 +1,10 @@
 .socialSection{
     border-bottom: $border;
+    padding-left: 1%;
+
+    @media (min-width: 768px) {
+      display: flex;
+   }
 }
 .cardContainer {
     display: flex;
@@ -13,8 +18,9 @@
     margin-bottom: 3%;
       @media (min-width: 768px) {
         margin: 20px;
+        width: 45%;
       }
-    }
+}
 .socialImage {
 display: flex;
 justify-content: center;
@@ -22,8 +28,8 @@ align-items: center;
 background-color: $main-color;
 border-radius: 100%;
 margin-left: 20px;
-width: 75px;
-height: 75px;
+width: 110px;
+height: 110px;
 margin-right: 15%;
 }
   

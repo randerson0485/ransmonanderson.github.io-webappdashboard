@@ -13,7 +13,7 @@
 }
 
 .alert{
-    width: 80%;
+    width: 100%;
     background-color: $main-color-2;
     border-radius: 15px;
     padding: 1%;
@@ -21,14 +21,20 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    font-size: small;
 
     @media (min-width: 768px) {
-       width: 100%;
+       width: 90%;
     }
 
     p{
         display: inline-block;
     }
+}
+.alertBanner{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
 }
 .alertBannerClose{
     font-weight: bold;

@@ -3,6 +3,7 @@
 }
 
 .gridContainer {
+  margin: 0;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
@@ -52,9 +53,6 @@ canvas {
   .doughnutSection {
     padding-left: 3%;
   }
-  .socialSection {
-    display: flex;
-  }
   main {
     margin-left: 1%;
   }
@@ -78,21 +76,102 @@ header {
 .notificationHeader {
   background-color: #7477bf;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   color: white;
-  padding: 2%;
+  width: 100%;
+  padding-top: 5%;
+  padding-left: 1.5%;
+  justify-content: space-evenly;
 }
-.notificationHeader img {
-  height: 60px;
-  width: 50px;
+.notificationHeader .notify {
+  position: relative;
+  width: 20%;
+  height: 20%;
+  margin-top: 5%;
+}
+@media (min-width: 768px) {
+  .notificationHeader .notify {
+    height: 23%;
+    width: 18%;
+    margin-top: 1.5%;
+  }
+  .notificationHeader .notify .notifyBell {
+    position: absolute;
+    top: 0vh;
+    left: 13vw;
+    width: 9%;
+    height: 88%;
+    background-color: #2ecc71;
+    border-radius: 50%;
+  }
+  .notificationHeader .notify .bellIcon {
+    height: 207%;
+    width: 110%;
+  }
+}
+@media (min-width: 1024px) {
+  .notificationHeader .notify .notifyBell {
+    left: 11vw;
+  }
+}
+.notificationHeader h1 {
+  font-size: 1rem;
+}
+.notificationHeader h4 {
+  font-size: 0.8rem;
+}
+.notificationHeader .profilePic {
+  height: 22%;
+  width: 15%;
   border-radius: 50%;
+  margin-top: 5%;
+}
+.notificationHeader .bellIcon {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.notificationHeader .bellIcon:hover {
+  scale: 1.1;
+}
+.notificationHeader .notifyBell {
+  position: absolute;
+  top: 0vh;
+  left: 13vw;
+  width: 13%;
+  height: 38%;
+  background-color: #2ecc71;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .notificationHeader {
+    justify-content: space-around;
+    padding-top: 1%;
+    height: 70px;
+  }
+  .notificationHeader h1 {
+    margin-right: auto;
+  }
+  .notificationHeader h4 {
+    margin-left: 2%;
+    padding-right: 2%;
+  }
+  .notificationHeader .profilePic {
+    height: 43%;
+    width: 3%;
+    border-radius: 50%;
+    margin-top: 1.5%;
+  }
+  .notificationHeader .bellIcon {
+    height: 43%;
+    width: 3%;
+    border-radius: 50%;
+  }
 }
 
 nav {
   background-color: #4c50c3;
   color: white;
-  height: 100%;
+  height: 80%;
 }
 @media (min-width: 768px) {
   nav {
@@ -109,15 +188,12 @@ nav ul {
   flex-direction: row;
   margin: 0;
   padding: 0.8% 25% 0.5%;
-}
-@media (max-width: 768px) {
-  nav ul {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 }
 @media (min-width: 768px) {
   nav ul {
     flex-direction: column;
+    justify-content: normal;
   }
 }
 nav ul li {
@@ -128,14 +204,6 @@ nav ul li {
 nav ul img {
   height: 30px;
   width: 25px;
-}
-
-.notify {
-  width: 1px;
-  height: 1px;
-  border-radius: 50%;
-  background: #2ecc71;
-  padding: 0;
 }
 
 .mainHeader {
@@ -153,7 +221,7 @@ nav ul img {
 }
 
 .alert {
-  width: 80%;
+  width: 100%;
   background-color: #4c50c3;
   border-radius: 15px;
   padding: 1%;
@@ -161,14 +229,21 @@ nav ul img {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  font-size: small;
 }
 @media (min-width: 768px) {
   .alert {
-    width: 100%;
+    width: 90%;
   }
 }
 .alert p {
   display: inline-block;
+}
+
+.alertBanner {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
 }
 
 .alertBannerClose {
@@ -200,6 +275,12 @@ nav ul img {
 
 .socialSection {
   border-bottom: solid 0.1em rgb(169, 168, 168);
+  padding-left: 1%;
+}
+@media (min-width: 768px) {
+  .socialSection {
+    display: flex;
+  }
 }
 
 .cardContainer {
@@ -216,6 +297,7 @@ nav ul img {
 @media (min-width: 768px) {
   .cardContainer {
     margin: 20px;
+    width: 45%;
   }
 }
 
@@ -226,8 +308,8 @@ nav ul img {
   background-color: #7477bf;
   border-radius: 100%;
   margin-left: 20px;
-  width: 75px;
-  height: 75px;
+  width: 110px;
+  height: 110px;
   margin-right: 15%;
 }
 
@@ -260,7 +342,7 @@ nav ul img {
   border-bottom: solid 0.1em rgb(169, 168, 168);
   border-left: solid 0.1em rgb(169, 168, 168);
   padding-left: 3%;
-  height: 225vh;
+  height: 100%;
 }
 
 .memberCard {
