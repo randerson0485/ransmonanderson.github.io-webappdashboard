@@ -56,16 +56,8 @@ canvas {
   main {
     margin-left: 1%;
   }
-}
-@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
-  .activitySection, .memberSections, .messageSection, .settingsSection {
+  .activitySection, .membersSection, .messageSection, .settingsSection {
     grid-column: 1/span 2;
-  }
-}
-@media (min-width: 768px) {
-  .memberCard {
-    min-height: 20%;
-    max-height: 21%;
   }
 }
 header {
@@ -278,7 +270,7 @@ nav ul img {
   padding-left: 1%;
 }
 @media (min-width: 768px) {
-  .socialSection {
+  .socialSection .cardWrapper {
     display: flex;
   }
 }
@@ -290,14 +282,13 @@ nav ul img {
   padding: 1rem 5px;
   border: 1px solid lightgray;
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
 }
 @media (min-width: 768px) {
   .cardContainer {
-    margin: 20px;
-    width: 45%;
+    width: 32%;
   }
 }
 
@@ -307,10 +298,14 @@ nav ul img {
   align-items: center;
   background-color: #7477bf;
   border-radius: 100%;
-  margin-left: 20px;
-  width: 110px;
-  height: 110px;
-  margin-right: 15%;
+  width: 77px;
+  height: 78px;
+}
+@media (min-width: 768px) {
+  .socialImage {
+    width: 70px;
+    height: 68px;
+  }
 }
 
 .socialText {
@@ -334,15 +329,33 @@ nav ul img {
   margin-top: 0;
   margin-left: 1.1rem;
   font-size: 2.1rem;
-  font-weight: bold;
+  font-weight: lighter;
   color: rgb(58, 57, 57);
 }
 
-.activitySection, .memberSections {
-  border-bottom: solid 0.1em rgb(169, 168, 168);
-  border-left: solid 0.1em rgb(169, 168, 168);
+@media (min-width: 1024px) {
+  .duoSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+.activitySection h3, .membersSection h3 {
+  padding-left: 2%;
+}
+
+.membersSection {
   padding-left: 3%;
   height: 100%;
+}
+@media (min-width: 768px) {
+  .membersSection {
+    width: 96%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 2%;
+  }
 }
 
 .memberCard {
@@ -356,6 +369,8 @@ nav ul img {
   .memberCard {
     flex-direction: row;
     margin-right: 0;
+    height: 30%;
+    padding-bottom: 3%;
   }
   .memberCard img {
     padding-right: 2%;
@@ -367,13 +382,34 @@ nav ul img {
   }
 }
 
-img, .memberText {
+.activitySection {
+  padding-left: 3%;
+  height: 100%;
+}
+
+.activityCard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 2%;
+  border-bottom: solid 0.1em rgb(169, 168, 168);
 }
 @media (min-width: 768px) {
-  img, .memberText {
+  .activityCard {
+    flex-direction: row;
+    width: auto;
+    padding-bottom: 2%;
+  }
+}
+
+img, .memberText p, .memberText span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2%;
+}
+@media (min-width: 768px) {
+  img, .memberText p, .memberText span {
     display: block;
   }
 }
@@ -384,6 +420,12 @@ img {
 
 .memberText span {
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .memberText {
+    margin-left: 4%;
+  }
 }
 
 .widgetContainer {

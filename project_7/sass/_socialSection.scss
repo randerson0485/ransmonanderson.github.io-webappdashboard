@@ -1,10 +1,13 @@
 .socialSection{
-    border-bottom: $border;
-    padding-left: 1%;
+  border-bottom: $border;
+  padding-left: 1%;
 
+  .cardWrapper{
     @media (min-width: 768px) {
       display: flex;
    }
+  }
+  
 }
 .cardContainer {
     display: flex;
@@ -13,24 +16,26 @@
     padding: 1rem 5px;
     border: 1px solid lightgray;
     border-radius: 5px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
       @media (min-width: 768px) {
-        margin: 20px;
-        width: 45%;
+        width: 32%;
       }
 }
 .socialImage {
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: $main-color;
-border-radius: 100%;
-margin-left: 20px;
-width: 110px;
-height: 110px;
-margin-right: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-color;
+  border-radius: 100%;
+  width: 77px;
+  height: 78px;
+
+  @media (min-width: 768px){
+    width: 70px;
+    height: 68px;
+  }
 }
   
 .socialText {
@@ -52,7 +57,7 @@ align-items: flex-start;
     margin-top: 0;
     margin-left: 1.1rem;
     font-size: 2.1rem;
-    font-weight: bold;
+    font-weight: lighter;
     color: rgb(58, 57, 57);
 }
 
