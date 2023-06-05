@@ -2,12 +2,12 @@
   box-sizing: border-box;
 }
 
-.gridContainer {
-  margin: 0;
+.grid-container {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas: "header" "navigation" "main";
+  margin: 0;
 }
 
 canvas {
@@ -34,6 +34,7 @@ canvas {
   .gridContainer {
     grid-template-columns: 75px 1fr;
     grid-template-areas: "header header" "nav main";
+    margin: 0;
   }
   .main {
     grid-template-columns: 50%;
@@ -53,11 +54,13 @@ canvas {
   .doughnutSection {
     padding-left: 3%;
   }
-  main {
-    margin-left: 1%;
-  }
   .activitySection, .membersSection, .messageSection, .settingsSection {
     grid-column: 1/span 2;
+  }
+}
+@media (min-width: 1024px) {
+  .activitySection, .membersSection, .settingsSection, .messageSection {
+    grid-column: initial;
   }
 }
 header {
@@ -69,9 +72,10 @@ header {
   background-color: #7477bf;
   display: flex;
   color: white;
+  height: 5rem;
   width: 100%;
-  padding-top: 5%;
-  padding-left: 1.5%;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
   justify-content: space-evenly;
 }
 .notificationHeader .notify {
@@ -88,21 +92,16 @@ header {
   }
   .notificationHeader .notify .notifyBell {
     position: absolute;
-    top: 0vh;
-    left: 13vw;
+    top: -1px;
+    left: 45px;
     width: 9%;
     height: 88%;
     background-color: #2ecc71;
     border-radius: 50%;
   }
   .notificationHeader .notify .bellIcon {
-    height: 207%;
-    width: 110%;
-  }
-}
-@media (min-width: 1024px) {
-  .notificationHeader .notify .notifyBell {
-    left: 11vw;
+    height: 25px;
+    width: 69px;
   }
 }
 .notificationHeader h1 {
@@ -112,14 +111,14 @@ header {
   font-size: 0.8rem;
 }
 .notificationHeader .profilePic {
-  height: 22%;
-  width: 15%;
+  height: 39px;
+  width: 75px;
   border-radius: 50%;
-  margin-top: 5%;
+  margin-top: 0.5rem;
 }
 .notificationHeader .bellIcon {
-  height: 100%;
-  width: 100%;
+  height: 25px;
+  width: 69px;
   border-radius: 50%;
 }
 .notificationHeader .bellIcon:hover {
@@ -147,12 +146,6 @@ header {
     margin-left: 2%;
     padding-right: 2%;
   }
-  .notificationHeader .profilePic {
-    height: 43%;
-    width: 3%;
-    border-radius: 50%;
-    margin-top: 1.5%;
-  }
   .notificationHeader .bellIcon {
     height: 43%;
     width: 3%;
@@ -167,7 +160,7 @@ nav {
 }
 @media (min-width: 768px) {
   nav {
-    height: 2750px;
+    height: 100%;
     top: 22%;
     left: 8px;
     width: 75px;
@@ -201,7 +194,6 @@ nav ul img {
 .mainHeader {
   display: flex;
   flex-direction: row;
-  margin: 0;
 }
 
 .dashboardSearch {
@@ -221,6 +213,7 @@ nav ul img {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  height: 50px;
   font-size: small;
 }
 @media (min-width: 768px) {
@@ -333,28 +326,30 @@ nav ul img {
   color: rgb(58, 57, 57);
 }
 
-@media (min-width: 1024px) {
-  .duoSection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+.activitySection, .membersSection {
+  background-color: ghostwhite;
 }
-
 .activitySection h3, .membersSection h3 {
   padding-left: 2%;
 }
 
 .membersSection {
-  padding-left: 3%;
-  height: 100%;
+  height: 500px;
 }
 @media (min-width: 768px) {
   .membersSection {
-    width: 96%;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 2%;
+  }
+}
+@media (min-width: 1024px) {
+  .membersSection {
+    display: grid; /* Display activityCard items in a grid */
+    grid-template-columns: 1fr; /* Two equal-sized columns */
+    gap: 10px; /* Gap between grid items */
+    border-right: solid 0.1em rgb(169, 168, 168);
+    border-bottom: solid 0.1em rgb(169, 168, 168);
+    padding-right: 1%;
   }
 }
 
@@ -381,10 +376,23 @@ nav ul img {
     margin-left: auto;
   }
 }
+@media (min-width: 1024px) {
+  .memberCard {
+    height: 9.5rem;
+  }
+}
 
 .activitySection {
-  padding-left: 3%;
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (min-width: 1024px) {
+  .activitySection {
+    display: grid; /* Display activityCard items in a grid */
+    grid-template-columns: 1fr; /* Two equal-sized columns */
+    gap: 10px; /* Gap between grid items */
+    border-bottom: solid 0.1em rgb(169, 168, 168);
+  }
 }
 
 .activityCard {
@@ -401,6 +409,16 @@ nav ul img {
     padding-bottom: 2%;
   }
 }
+@media (min-width: 1024px) {
+  .activityCard {
+    height: 9.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .activityCard .memberText {
+    width: 300px;
+  }
+}
 
 img, .memberText p, .memberText span {
   display: flex;
@@ -411,6 +429,11 @@ img, .memberText p, .memberText span {
 @media (min-width: 768px) {
   img, .memberText p, .memberText span {
     display: block;
+  }
+}
+@media (min-width: 1024px) {
+  img, .memberText p, .memberText span {
+    padding-right: 0;
   }
 }
 
@@ -439,6 +462,13 @@ img {
   border-bottom: solid 0.1em rgb(169, 168, 168);
   padding-bottom: 4%;
 }
+@media (min-width: 1024px) {
+  .messageSection {
+    display: grid; /* Display activityCard items in a grid */
+    grid-template-columns: 1fr; /* Two equal-sized columns */
+    gap: 10px; /* Gap between grid items */
+  }
+}
 
 input {
   border-radius: 4%;
@@ -463,6 +493,14 @@ textarea {
   width: 86%;
   border-radius: 4%;
   height: 4em;
+}
+
+@media (min-width: 1024px) {
+  .settingsSection {
+    display: grid; /* Display activityCard items in a grid */
+    grid-template-columns: 1fr; /* Two equal-sized columns */
+    gap: 10px; /* Gap between grid items */
+  }
 }
 
 .settings {

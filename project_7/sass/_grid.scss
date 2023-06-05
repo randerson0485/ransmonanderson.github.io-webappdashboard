@@ -1,5 +1,4 @@
-.gridContainer{
-    margin: 0;
+.grid-container {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -7,6 +6,7 @@
     "header"
     "navigation"
     "main";
+    margin: 0;
 }
 canvas{
     max-width: 100%;
@@ -20,7 +20,7 @@ grid-area: nav;
 .main {
 grid-area: main;
 }
-.main {
+.main{
     display: grid;
 }
 
@@ -34,8 +34,9 @@ grid-area: main;
         grid-template-areas:
         "header header"
         "nav main";
+        margin: 0;
     }
-    .main {
+    .main{
         grid-template-columns: 50% ;
     }
     .trafficLineSection, .socialSection, .alert, .mainHeader {
@@ -53,15 +54,15 @@ grid-area: main;
     .doughnutSection{
         padding-left: 3%;
     }
-    main{
-        margin-left: 1%;
-    }
     .activitySection, .membersSection, .messageSection, .settingsSection{ 
         grid-column: 1 / span 2;      
     }    
 }
-
-
+@media (min-width: 1024px){
+    .activitySection, .membersSection, .settingsSection, .messageSection{
+        grid-column: initial; 
+    }    
+}
 
 
 

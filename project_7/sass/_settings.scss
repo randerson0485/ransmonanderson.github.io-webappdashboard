@@ -1,3 +1,10 @@
+.settingsSection{
+  @media (min-width: 1024px){
+    display: grid; /* Display activityCard items in a grid */
+    grid-template-columns: 1fr; /* Two equal-sized columns */
+    gap: 10px; /* Gap between grid items */    
+  }
+}
 .settings {
     grid-area: settings;
     border-bottom: none;
