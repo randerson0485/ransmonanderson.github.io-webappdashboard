@@ -1,0 +1,152 @@
+.settingsSection{
+  @media (min-width: 1024px){
+    display: grid; /* Display activityCard items in a grid */
+    grid-template-columns: 1fr; /* Two equal-sized columns */
+    gap: 10px; /* Gap between grid items */    
+  }
+}
+.settings {
+    grid-area: settings;
+    border-bottom: none;
+  }
+  
+  .toggles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .toggles h3 {
+    margin: 0;
+    text-transform: capitalize;
+  }
+  
+  .timezones {
+    background-color: #fafafa;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: .9rem;
+    height: auto;
+    width: 86%;
+    outline: 0;
+    margin: 10px;
+    padding: 1rem 5px;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  }
+  
+  option {
+    font-size: .9rem;
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .settings-save,
+  .settings-cancel {
+    width: 100%;
+    padding: 1rem 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .9rem;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .settings-save {
+    background-color: #7477bf;
+    margin-right: 10px;
+  }
+  
+  .settings-cancel {
+    background-color: #ccc;
+    margin-left: 10px;
+  }
+  
+  /* The slider box */
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 36px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider button */
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  
+  input:checked + .slider {
+    background-color: #7477bf;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 3px #ccc;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(34px);
+    -ms-transform: translateX(34px);
+    transform: translateX(34px);
+  }
+  
+  .slider:after {
+    content:'OFF';
+    color: white;
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 75%;
+    font-size: .8rem;
+    font-weight: bold;
+  }
+  
+  input:checked + .slider:after {
+    content:'ON';
+    left: 25%;
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
