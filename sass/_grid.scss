@@ -35,6 +35,7 @@ grid-area: main;
         "header header"
         "nav main";
         margin: 0;
+        display: grid;
     }
     .main{
         grid-template-columns: 50% ;

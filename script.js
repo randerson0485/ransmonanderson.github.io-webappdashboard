@@ -2,7 +2,8 @@ const alertBanner = document.getElementById("alert");
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
-const notify = document.querySelector('.notify');
+const notify = document.querySelector('.notifyBell');
+
 
 
 alertBanner.innerHTML = `<div class="alertBanner">

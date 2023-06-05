@@ -35,6 +35,7 @@ canvas {
     grid-template-columns: 75px 1fr;
     grid-template-areas: "header header" "nav main";
     margin: 0;
+    display: grid;
   }
   .main {
     grid-template-columns: 50%;
@@ -163,7 +164,7 @@ nav {
     height: 100%;
     top: 22%;
     left: 8px;
-    width: 75px;
+    width: 45px;
     display: flex;
   }
 }
@@ -500,6 +501,8 @@ textarea {
     display: grid; /* Display activityCard items in a grid */
     grid-template-columns: 1fr; /* Two equal-sized columns */
     gap: 10px; /* Gap between grid items */
+    border-left: solid 0.1em rgb(169, 168, 168);
+    padding-left: 2%;
   }
 }
 
@@ -514,6 +517,11 @@ textarea {
   justify-content: space-between;
   align-items: center;
   margin: 5px 0;
+}
+@media (min-width: 1024px) {
+  .toggles {
+    justify-content: normal;
+  }
 }
 
 .toggles h3 {
@@ -575,6 +583,11 @@ option {
   display: inline-block;
   width: 70px;
   height: 36px;
+}
+@media (min-width: 1024px) {
+  .switch {
+    margin-left: 10px;
+  }
 }
 
 .switch input {

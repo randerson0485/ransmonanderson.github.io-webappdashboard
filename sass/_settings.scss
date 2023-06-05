@@ -2,7 +2,9 @@
   @media (min-width: 1024px){
     display: grid; /* Display activityCard items in a grid */
     grid-template-columns: 1fr; /* Two equal-sized columns */
-    gap: 10px; /* Gap between grid items */    
+    gap: 10px; /* Gap between grid items */  
+    border-left: $border;
+    padding-left: 2%;  
   }
 }
 .settings {
@@ -16,6 +18,10 @@
     justify-content: space-between;
     align-items: center;
     margin: 5px 0;
+
+    @media (min-width:1024px){
+      justify-content: normal;
+    }
   }
   
   .toggles h3 {
@@ -78,6 +84,10 @@
     display: inline-block;
     width: 70px;
     height: 36px;
+
+    @media (min-width:1024px){
+      margin-left: 10px;    
+    }
   }
   
   .switch input {
