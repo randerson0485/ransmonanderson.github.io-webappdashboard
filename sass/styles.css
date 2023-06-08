@@ -335,7 +335,8 @@ nav ul img {
 }
 
 .membersSection {
-  height: 500px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media (min-width: 768px) {
   .membersSection {
@@ -520,7 +521,7 @@ textarea {
 }
 @media (min-width: 1024px) {
   .toggles {
-    justify-content: normal;
+    padding-right: 45%;
   }
 }
 
